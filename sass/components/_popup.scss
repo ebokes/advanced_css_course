@@ -10,8 +10,7 @@
     visibility: hidden;
     transition: all .3s;
 
-    
-    &__content{
+        &__content{
         @include center-hor-vert;
         width: 75%;
         background-color: $color-white;
@@ -20,7 +19,7 @@
         display: table; 
         overflow: hidden;
         opacity: 0;
-        transform: translate(-50%, -50%) scale(0);
+        transform: translate(-50%, -50%) scale(.25);
         transition: all .5s .2s;
     }
 
