@@ -9,8 +9,18 @@
     opacity: 0;
     visibility: hidden;
     transition: all .3s;
+     //this feature adds a blur backdrop to a popup
+    //It is currently not supported by google chrome but safari, to work in safari, we have to use the webkit prefix
+     
+    //We can implement gracefull degredation using the @supports rule
+    @supports(-webkit-backdrop-filter:blur(10px)) or (backdrop-filter: blur(10px)){
+        //If the browser supports any of the above declarations, implement the code that follows
+        -webkit-backdrop-filter: blur(10px);
+        background-color: rgba($color-black, .2);
+        backdrop-filter: blur(10px);
 
-        &__content{
+    }
+    &__content{
         @include center-hor-vert;
         width: 75%;
         background-color: $color-white;

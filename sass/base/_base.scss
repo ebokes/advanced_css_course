@@ -12,12 +12,12 @@ html{
  font-size:62.5%; //1rem = 10px; 10px/16px = 62.5%
 
 
-    @include respond(tab-land){
+    @include respond(tab-land){ //width < 1200?
         font-size: 56.25%; //1 rem = 9px, 9/16*100 = 56.25%;
     }
     
-    @include respond(tab-port){
-        font-size: 50%; //1 rem = 8px, 8/16*100 = 50%;
+    @include respond(tab-port){ //width < 900?           the tab-port should come under the tab-land because the browser 
+        font-size: 50%; //1 rem = 8px, 8/16*100 = 50%;   would apply the last style
     }
     
     @include respond(big-desktop){

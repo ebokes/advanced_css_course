@@ -15,11 +15,11 @@
 
 /*
 MEDIA QUERY MANAGER
-0-600px:     phone
-600 - 900px: Tablet Portrait
-900 - 1200px: Tablet Landscape
-[1200 - 1800]: is where our normal styles apply
-1800+:       Big desktop
+0 - 600px:      Phone
+600 - 900px:    Tablet Portrait
+900 - 1200px:   Tablet Landscape
+[1200 - 1800]:  is where our normal styles apply
+1800+:          Big desktop
 
 $breakpoint argument choices:
 -phone
@@ -46,3 +46,10 @@ ORDER: Base + typography > general layout + grid > page layout > component
         @media(min-width:112.5em) {@content}; // 1800/16
     }
 }
+
+/*
+@content - allows us to pass a block of code into a mixin
+In media queries, em and rem are not affected by our root font size setting, so 1 rem or 1em = 16px, so its best to use em instead. So we convert all sizes in px to em by dividing them by 16px
+//while inserting the media query into the code, the smallest screen size should always be underneath the bigger ones since the browser executes the lowest style last
+
+*/
